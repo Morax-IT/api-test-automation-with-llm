@@ -1,45 +1,53 @@
 # api-test-automation-with-llm
-MCP-SLACK-CLAUDE
-Dự án này xây dựng hệ thống tự động kiểm thử API website, sử dụng mô hình Claude thông qua MCP client. Claude đóng vai trò đánh giá phản hồi API dựa trên ngữ cảnh, phát hiện lỗi hoặc bất thường, đồng thời gửi cảnh báo tức thì lên Slack để nhóm phát triển nắm bắt.
+# 🤖 LLM-Powered API Testing with Claude, MCP & Slack
+This project automates the testing of website APIs using **Claude** (via **MCP Client**) to reason over API responses and detect logical or data anomalies. Test results are sent in real-time to **Slack** for team visibility and prompt action.
 
-🔹 Tính năng chính:
+---
 
-Kiểm thử API website hoàn toàn tự động với Claude
+## 🔍 Use Case
 
-Phân tích phản hồi bằng trí tuệ nhân tạo có ngữ cảnh (qua MCP)
+Ideal for teams needing:
+- AI-based testing of API correctness
+- Lightweight test automation without full-blown frameworks
+- Real-time visibility through Slack integration
 
-Phát hiện lỗi logic hoặc dữ liệu sai lệch
+---
 
-Tự động gửi thông báo kết quả lên Slack
+## 🚀 Features
 
-🔧 Công nghệ sử dụng:
+- ✅ Automated testing of API endpoints
+- 🧠 LLM reasoning via Claude (MCP protocol)
+- 📊 API response validation based on expected behavior
+- 📢 Slack integration for test reports and alerts
+- 🔄 Easily extensible with new tests and prompt formats
 
-Claude (thông qua MCP client)
+---
 
-Slack Webhook
+## 🛠️ Tech Stack
 
-Python hoặc Node.js
+| Component      | Description                                 |
+|----------------|---------------------------------------------|
+| Claude         | Large Language Model for analysis           |
+| MCP Client     | Interface to communicate with Claude        |
+| Python         | Task orchestration                          |
+| REST APIs      | Target endpoints to test                    |
+| Slack Webhook  | Notification system                         |
 
-Giao tiếp API REST
-------------------------------------------------------------------------------------------------------------------`
-This project provides an automated testing system for website APIs using Claude (via MCP client). It validates API responses using LLM capabilities, identifies inconsistencies or errors, and sends notifications to Slack for visibility and team collaboration.
+---
 
-🔹 Core Features:
+## 📁 Project Structure
+├── src/
+│ ├── test_runner.py # Main script: runs test logic
+│ ├── mcp_client.py # Sends prompt to Claude via MCP
+│ └── notifier.py # Sends messages to Slack
+├── tests/
+│ └── sample_test.json # Sample test case (API URL + expectation)
+├── prompts/
+│ └── response_eval.txt # Prompt template for Claude
+├── config/
+│ └── slack_webhook.yaml # Webhook & channel setup
+├── requirements.txt
+└── README.md
 
-Automated website API testing powered by Claude
 
-Context-aware LLM reasoning using MCP client
 
-API response validation & anomaly detection
-
-Slack integration for real-time test result notifications
-
-🔧 Tech Stack:
-
-Claude via MCP Client
-
-Slack Webhook
-
-Python (or relevant runtime)
-
-RESTful API endpoints
