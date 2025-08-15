@@ -35,19 +35,5 @@ Ideal for teams needing:
 
 ---
 
-## 📁 Project Structure
-├── src/
-│ ├── test_runner.py # Main script: runs test logic
-│ ├── mcp_client.py # Sends prompt to Claude via MCP
-│ └── notifier.py # Sends messages to Slack
-├── tests/
-│ └── sample_test.json # Sample test case (API URL + expectation)
-├── prompts/
-│ └── response_eval.txt # Prompt template for Claude
-├── config/
-│ └── slack_webhook.yaml # Webhook & channel setup
-├── requirements.txt
-└── README.md
-
 
 
